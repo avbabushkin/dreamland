@@ -106,7 +106,7 @@ body {
     margin-top: 20px;
 
     .wrapper-newdream-form {
-      margin: 0px 0px 0px 3 0px; 
+      margin: 0px 0px 0px 30px; 
       
       .item-newdream-form {
         margin-bottom: 10px;
@@ -130,12 +130,11 @@ body {
           border: none;
           border-bottom: 1px solid #999;
         }
-
-    
       }
     }
   }
 }
+
 input[type=submit] {
       padding:5px 15px; 
       background:#ccc; 
@@ -143,4 +142,4 @@ input[type=submit] {
       cursor:pointer;
       -webkit-border-radius: 5px;
       border-radius: 5px; 
-    }
+}
