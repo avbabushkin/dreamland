@@ -1,0 +1,46 @@
+/ основной контейнер
+/ display: flex;
+/ dlex-duration: column;
+.container-user
+  / аватар и имя
+  / display: flex;
+  .block-image-name
+    .image-user
+      = image_tag(@user.avatar)
+    .wrapper-name
+        h1 = @user.name
+        = @user.username
+
+  / блок со списком желаний
+  / display: flex;
+  .block-dreams
+    h2 Список желаний:
+    .wrapper-user-dreams
+      - @dreams.each do |dream|
+        .item-user-dream
+          h3 = dream.dream_title
+          p = dream.dream_text
+          p = link_to "удалить мечту", dream_path(dream), method: :delete
+  
+  / блок добавления нового желания
+  / display: flex;
+  .block-new-dreams
+    h2 Добавить мечту: 
+    .wrapper-newdream-form
+      = form_for @new_dream do |form|
+        
+        .item-newdream-form
+          p
+            = form.text_field :dream_title,
+            placeholder: "напишите заголовок...",
+            class: "form-style-title"
+        
+        .item-newdream-form
+          p
+            = form.text_area :dream_text,
+            placeholder: "напишите текст...",
+            class: "form-style-text"
+        
+        .item-newdream-form-submit
+          p
+            = form.submit "  добавить  "

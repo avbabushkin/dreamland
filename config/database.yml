@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: dreamgram
+  password: Ss123456
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: dreamgram_development
+
+test:
+  <<: *default
+  database: dreamgram_test
+
+production:
+  <<: *default
+  database: dreamgram_production
+  username: dreamgram
+  password: <%= ENV['DREAMGRAM_DATABASE_PASSWORD'] %>
