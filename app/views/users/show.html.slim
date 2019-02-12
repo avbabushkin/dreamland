@@ -6,7 +6,7 @@
   / display: flex;
   .block-image-name
     .image-user
-      = image_tag(@user.avatar)
+      = render 'avatar'
     .wrapper-name
         h1 = @user.name
         = @user.username

@@ -1,15 +1,13 @@
 .container-welcome-page
-  h1 Welcome to dreamgram
-  br
-  br
-  = submit_tag 'Sign up', class: 'btn'
-  br
-  br
   center
-    h3 Зарегистрированные пользователи
-    br
-    - @users.each do |user|
-      p
-        | пользователь:
-        strong
-          =< link_to "#{user.username}", user_path(user)
+    h1 Welcome to dreamgram
+    
+    .btn.item-container
+      = link_to 'Sign up', new_user_path
+    .users.item-container
+      h3 Зарегистрированные пользователи
+      - @users.each do |user|
+        p.item-container
+          | пользователь:
+          strong
+            =< link_to "#{user.username}", user_path(user)

@@ -1,0 +1,41 @@
+.block-new-user
+  center
+    h2 Регистрация 
+    .wrapper-newuser-form
+      = form_for @new_user do |form|
+        
+        .item-newuser-form
+          p
+            = form.text_field :name,
+            placeholder: "Введите имя",
+            class: "form-style-title"
+        
+        .item-newuser-form
+          p
+            = form.text_field :username,
+            placeholder: "Введите ник",
+            class: "form-style-title"
+        
+        .item-newuser-form
+          p
+            = form.text_field :avatar,
+            placeholder: "Вставьте ссылку для аватара",
+            class: "form-style-title"
+
+        .item-newuser-form
+          p
+            = form.text_field :password,
+            placeholder: "Введите пароль",
+            type: "password",
+            class: "form-style-title"
+
+        .item-newuser-form
+          p
+            = form.text_field :password_confirmation,
+            placeholder: "Подтвердите пароль",
+            type: "password",
+            class: "form-style-title"
+        
+        .item-newuser-form-submit
+          p
+            = form.submit "  Зарегистрироваться  "

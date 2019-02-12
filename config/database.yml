@@ -15,5 +15,4 @@ test:
 
 production:
   <<: *default
-  database: dreamgram_development
-
+  database: dreamgram_production

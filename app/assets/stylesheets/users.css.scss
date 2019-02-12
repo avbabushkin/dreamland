@@ -23,13 +23,38 @@ body {
 
 .container-welcome-page {
   display: flex;
-  flex-direction: column;
-  justify-content: center;  
-
+  flex-direction: column;  
+  
   h1 {
     padding-top: 10%;
     font-size: 60px;
-    text-align: center;
+  }
+  
+  .users {
+    h3 {
+      margin-top: 70px;
+    }
+  }
+
+  .item-container {
+    margin-top: 10px;
+  }
+ 
+  .btn {
+    display: flex;
+    margin: 50px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
   }
 }
 
@@ -45,6 +70,8 @@ body {
     font-size: 15px;
     color: gray;
   }
+
+  // show user page styles
 
   .block-image-name {
     display: flex;
@@ -135,10 +162,50 @@ body {
   }
 }
 
+// new user page styles
+
+.block-new-user {
+  display: flex;
+  margin: 20px auto;
+  width: 350px;
+
+  h2 {
+    margin: 40px 0px;
+    font-size: 50px;
+    color: #999;
+  } 
+
+  .wrapper-newuser-form {
+    margin: 0px 0px 0px 0px; 
+    
+    .item-newuser-form {
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+
+      .form-style-title {
+        height: 30px;
+        width: 300px;
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid #999;
+      } 
+
+      .form-style-text {
+        height: 100px;
+        width: 300px;
+        border: none;
+        border-bottom: 1px solid #999;
+      }
+    }
+  }
+}
+
 input[type=submit] {
-      padding:5px 15px; 
+      padding: 10px 15px; 
       background:#ccc; 
       border:0 none;
+      font-size: 20px;
       cursor:pointer;
       -webkit-border-radius: 5px;
       border-radius: 5px; 

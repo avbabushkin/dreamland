@@ -1,0 +1,4 @@
+- if @user.avatar != nil
+  = image_tag(@user.avatar)
+- else
+  = image_tag "no_photo.png", class: "no-photo"
