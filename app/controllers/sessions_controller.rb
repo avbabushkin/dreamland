@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
+  # TODO
   def create
-    # sessions[:current_user_id] = @user.id
   end
 
   def destroy

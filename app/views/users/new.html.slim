@@ -13,32 +13,32 @@
         .item-newuser-form
           p
             = form.text_field :name,
-            placeholder: :name,
+            placeholder: 'Имя',
             class: "form-style-title"
         
         .item-newuser-form
           p
             = form.text_field :username,
-            placeholder: :username,
+            placeholder: 'Имя пользователя',
             class: "form-style-title"
         
         .item-newuser-form
           p
-            = form.file_field :avatar,
-            placeholder: :avatar,
+            = form.text_field :avatar,
+            placeholder: 'Ссылка на фото',
             class: "form-style-title"
 
         .item-newuser-form
           p
             = form.text_field :password,
-            placeholder: :password,
+            placeholder: 'Пароль',
             type: "password",
             class: "form-style-title"
 
         .item-newuser-form
           p
             = form.text_field :password_confirmation,
-            placeholder: :password_confirmation,
+            placeholder: 'Подтверждение пароля',
             type: "password",
             class: "form-style-title"
         
