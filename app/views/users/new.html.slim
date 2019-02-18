@@ -2,40 +2,46 @@
   center
     h2 Регистрация 
     .wrapper-newuser-form
-      = form_for @new_user do |form|
+      = form_for @user do |form|
         
+        -if @user.errors.any?
+          .form-errors
+            ul
+              -for message in @user.errors.full_messages
+                li.form-error-message =message
+
         .item-newuser-form
           p
             = form.text_field :name,
-            placeholder: "Введите имя",
+            placeholder: :name,
             class: "form-style-title"
         
         .item-newuser-form
           p
             = form.text_field :username,
-            placeholder: "Введите ник",
+            placeholder: :username,
             class: "form-style-title"
         
         .item-newuser-form
           p
-            = form.text_field :avatar,
-            placeholder: "Вставьте ссылку для аватара",
+            = form.file_field :avatar,
+            placeholder: :avatar,
             class: "form-style-title"
 
         .item-newuser-form
           p
             = form.text_field :password,
-            placeholder: "Введите пароль",
+            placeholder: :password,
             type: "password",
             class: "form-style-title"
 
         .item-newuser-form
           p
             = form.text_field :password_confirmation,
-            placeholder: "Подтвердите пароль",
+            placeholder: :password_confirmation,
             type: "password",
             class: "form-style-title"
         
         .item-newuser-form-submit
           p
-            = form.submit "  Зарегистрироваться  "
+            = form.submit "Зарегистрироваться"

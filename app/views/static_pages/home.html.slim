@@ -1,0 +1,7 @@
+.container-home-page
+  h1 Добро пожаловать в DreamLand
+  h3 Наши пользователи
+  .wrapper-users-list
+    .item-users-list
+      - @user.each do |user|
+        = link_to "#{user.name}", user_path(user) 

@@ -1,0 +1,44 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// home page style
+
+.container-home-page {
+  display: flex;
+  flex-direction: column;  
+  
+  h1 {
+    padding-top: 10%;
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  h3 {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .wrapper-users-list {}
+  .item-users-list {
+    margin-top: 10px;
+    text-align: center;
+  }
+ 
+  .btn {
+    display: flex;
+    margin: 50px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}

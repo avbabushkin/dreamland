@@ -1,74 +1,17 @@
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-@font-face {
-  font-family: RobotoLight;
-  src: url(fonts/Roboto/Roboto-Light.ttf);
-}
-
-@font-face {
-  font-family: RobotoBold;
-  src: url(fonts/Roboto/Roboto-Bold.ttf);
-}
-
-body {
-  font-family: RobotoLight;
-  line-height: 1;
-  color: black;
-  background: white;
-}
-
-.container-welcome-page {
-  display: flex;
-  flex-direction: column;  
-  
-  h1 {
-    padding-top: 10%;
-    font-size: 60px;
-  }
-  
-  .users {
-    h3 {
-      margin-top: 70px;
-    }
-  }
-
-  .item-container {
-    margin-top: 10px;
-  }
- 
-  .btn {
-    display: flex;
-    margin: 50px;
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: blue;
-    justify-content: center;
-    align-items: center;
-
-    a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-  }
-}
+// page show user
 
 .container-user {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 50px;
-  width: 800px;
+  width: 700px;
   border: 0px solid #999;
 
   h2 {
-    font-size: 15px;
-    color: gray;
+    font-size: 20px;
+    color: #515C68;
   }
 
   // show user page styles
@@ -100,66 +43,7 @@ body {
     }
   }
   
-  .block-dreams {
-    display: flex;
-    margin-top: 40px;
 
-    .wrapper-user-dreams {
-
-      border: 0px solid #999;
-      margin: 0px 0px 10px 30px;
-      
-      .item-user-dream {
-        padding-bottom: 20px;
-        border-bottom: 1px solid #DCDCDC;
-        h3 {
-
-        }
-        
-        p {
-          margin-top: 10px;
-        }
-        
-        a {
-          font-size: 12px;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-  .block-new-dreams {
-    display: flex;
-    margin-top: 20px;
-
-    .wrapper-newdream-form {
-      margin: 0px 0px 0px 30px; 
-      
-      .item-newdream-form {
-        margin-bottom: 10px;
-        border: none;
-        border-radius: 10px;
-        h3 {
-          font-size: 12px;
-        } 
-
-        .form-style-title {
-          height: 20px;
-          width: 300px;
-          font-size: 15px;
-          border: none;
-          border-bottom: 1px solid #999;
-        } 
-
-        .form-style-text {
-          height: 100px;
-          width: 300px;
-          border: none;
-          border-bottom: 1px solid #999;
-        }
-      }
-    }
-  }
 }
 
 // new user page styles
@@ -203,10 +87,20 @@ body {
 
 input[type=submit] {
       padding: 10px 15px; 
-      background:#ccc; 
-      border:0 none;
+      background: #515C68; 
+      border: 0 none;
       font-size: 20px;
+      color: #fff;
       cursor:pointer;
       -webkit-border-radius: 5px;
       border-radius: 5px; 
+}
+
+.form-errors {
+  color: #dc554f;
+}
+
+.form-error-message {
+  list-style: none;
+  margin-bottom: 10px;
 }

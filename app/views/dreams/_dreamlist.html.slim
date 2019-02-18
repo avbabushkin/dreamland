@@ -1,0 +1,11 @@
+- if @dreams.blank?
+  h2 Здесь пока пусто
+- else
+  - @dreams.each do |dream|
+    .item-user-dream
+      h2 = dream.dream_title
+      p = dream.dream_text
+      
+      ul
+        li = link_to "удалить мечту", dream_path(dream), method: :delete
+        li = dream.created_at.strftime("%d.%m.%Y")

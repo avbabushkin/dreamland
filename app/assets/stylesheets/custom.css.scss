@@ -1,0 +1,22 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url(fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url(fonts/Roboto/Roboto-Bold.ttf);
+}
+
+body {
+  font-family: RobotoLight;
+  line-height: 1;
+  color: black;
+  background: #F6F7F4;
+}
