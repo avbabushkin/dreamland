@@ -15,8 +15,9 @@
   / display: flex;
   .container-dreams
     -if flash[:notice]
-      .notice
-        = flash[:notice]
+      #notice
+        .notice
+          = flash[:notice]
     .block-exist-dreams
       h2 Мечты:
       .wrapper-user-dreams
