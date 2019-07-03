@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :dreams 
-  
   root 'static_pages#home'
-  match '/signup',  to: 'users#new', via: 'get'
-  match '/signin',  to: 'sessions#new', via: 'get'
-  match '/signout',  to: 'sessions#destroy', via: 'delete'
 
-  match '/about',  to: 'static_pages#about', via: 'get'
-  match '/contact',  to: 'static_pages#contact', via: 'get'
+  resources :users
+  resources :dreams 
+  resources :sessions, only: [:new, :create, :destroy]
+
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
+  get 'about', to: 'static_pages#about', as: 'about'
+  get 'contact', to: 'static_pages#contact', as: 'contact'
 end

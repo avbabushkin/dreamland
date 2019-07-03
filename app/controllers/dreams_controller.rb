@@ -12,7 +12,6 @@ class DreamsController < ApplicationController
       redirect_to user_path @dream.user
     end
   end
-
   def destroy
     @dream = Dream.find(params[:id])
     user = @dream.user

@@ -10,5 +10,5 @@
         li = link_to "удалить мечту", dream_path(dream), method: :delete
         li = dream.created_at.strftime("%d.%m.%Y")
       // лайки
-      .wrapper-likes
-        = button_to 'Like', dream_likes_path(@dream), method: :post
+      //.wrapper-likes
+      //  = button_to 'Like', dream_likes_path(@dream), method: :post
