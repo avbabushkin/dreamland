@@ -1,0 +1,52 @@
+// Home page style begin
+
+.login {
+  margin-bottom: 20px;
+  padding: 20px;
+  min-width: 315px;
+  border: 1px solid #d3d9de;
+  border-radius: 4px;
+  background-color: #FFF; 
+  
+  #notice {
+    
+  }
+
+  .field {
+    
+    #email {
+      padding: 6px 12px 8px; 
+      width: 270px;
+      border: 1px solid #d3d9de;
+      border-radius: 3px; 
+    }
+
+    #password {
+      padding: 6px 12px 8px; 
+      width: 270px;
+      border: 1px solid #d3d9de;
+      border-radius: 3px;
+    }
+
+  }
+  
+
+    input[type=submit] {
+      width: 100%;
+      padding: 7px 16px 8px;
+      border: 0px;
+      background: transparent;
+    }
+    
+    .btn {
+      // width: 100px !important;
+      // height: 35px !important;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  
+}
+
+// Home page style end

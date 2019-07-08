@@ -1,10 +1,24 @@
-.container-home-page
-  h1 Добро пожаловать в DreamLand
-  = link_to 'Sign up', signup_path, class: 'btn'
-  h3 Наши пользователи
-  .wrapper-users-list
-    .item-users-list
-      - @user.each do |user|
-        br
-        p
-          = link_to "#{user.name}", user_path(user) 
+.d-flex.justify-content-end.pt-5
+  .d-flex.flex-column.w-100
+    h1 Welcome to Dreamland
+    
+    p
+      | Here we are dream always. You can try too!  
+  .login
+    p id="notice" = notice
+    = render 'sessions/login'
+
+.d-flex.justify-content-end
+  .
+  .d-flex.flex-column.login
+    h5.mx-auto New in Dreamland?
+    a.btn.mt-3 href="#{signup_path}" role="button" Join
+
+
+  / h3 Наши пользователи
+  / .wrapper-users-list
+  /   .item-users-list
+  /     - @user.each do |user|
+  /       br
+  /       p
+  /         = link_to "#{user.email}", user_path(user)

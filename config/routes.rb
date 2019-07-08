@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
-  resources :users
+  resources :users #, except: [:index]
   resources :dreams 
   resources :sessions, only: [:new, :create, :destroy]
 

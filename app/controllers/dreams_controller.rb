@@ -1,4 +1,5 @@
 class DreamsController < ApplicationController
+  
   def create
     current_user = User.find_by(id: session[:current_user_id])
     @dream = Dream.new(dream_params)
@@ -12,6 +13,7 @@ class DreamsController < ApplicationController
       redirect_to user_path @dream.user
     end
   end
+  
   def destroy
     @dream = Dream.find(params[:id])
     user = @dream.user

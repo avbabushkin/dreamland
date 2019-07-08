@@ -1,3 +1,67 @@
+// new user page styles begin
+// root/signup
+
+
+.signup {
+  margin-bottom: 20px;
+  padding: 20px;
+  min-width: 315px;
+  border: 1px solid #d3d9de;
+  border-radius: 4px;
+  background-color: #FFF; 
+  
+  p {
+    height: 2px;
+  }
+
+  .field {
+    
+    #user_email {
+      padding: 6px 12px 8px; 
+      width: 270px;
+      border: 1px solid #d3d9de;
+      border-radius: 3px; 
+    }
+
+    #user_password {
+      padding: 6px 12px 8px; 
+      width: 270px;
+      border: 1px solid #d3d9de;
+      border-radius: 3px;
+    }
+
+    #user_password_confirmation {
+      padding: 6px 12px 8px; 
+      width: 270px;
+      border: 1px solid #d3d9de;
+      border-radius: 3px;
+    }
+
+  }
+  
+
+    input[type=submit] {
+      padding: 7px 16px 8px;
+      border: 0px;
+      background: transparent;
+      width: 100%;
+    }
+    
+    .btn {
+      // width: 100px !important;
+      // height: 35px !important;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  
+}
+
+// new user page styles end
+
+
+
 // page show user
 
 .container-user {
@@ -82,16 +146,16 @@
   }
 }
 
-input[type=submit] {
-      padding: 10px 15px; 
-      background: #515C68; 
-      border: 0 none;
-      font-size: 20px;
-      color: #fff;
-      cursor:pointer;
-      -webkit-border-radius: 5px;
-      border-radius: 5px; 
-}
+// input[type=submit] {
+//       padding: 10px 15px; 
+//       background: #515C68; 
+//       border: 0 none;
+//       font-size: 20px;
+//       color: #fff;
+//       cursor:pointer;
+//       -webkit-border-radius: 5px;
+//       border-radius: 5px; 
+// }
 
 .form-errors {
   color: #dc554f;

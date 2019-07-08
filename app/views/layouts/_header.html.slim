@@ -1,10 +1,14 @@
-header.navbar
-  ul
-    li
-      = link_to "Главная", root_path
-    li
-      = link_to "Контакты", contact_path
-    li
-      = link_to "О нас", about_path
-    li
-      = link_to "Войти", signin_path
+.navbar.navbar-dark.bg-primary.mb-3
+  .container
+    - if current_user
+      a.logo href="/" Dreamland   
+      ul.d-inline-flex
+        li 
+          = link_to current_user.email, user_path(current_user)
+        li
+          = link_to 'Log out', logout_path 
+    - else
+      a.logo href="/" Dreamland 
+      ul
+        li 
+          = link_to "Sign up", signup_path

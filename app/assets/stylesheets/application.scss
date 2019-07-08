@@ -10,7 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- * Поделючаем файл стилей который сбосит свойства всех элементов  
+ * Connection css file which reset all styles for every element
+ * Подключаем файл стилей, который сбосит свойства всех элементов  
  *= require custom
  *
  * Подключаем файлы основных стилей
@@ -18,7 +19,11 @@
  *= require users
  *= require dreams
  *= require static_pages
+ *= require home_page
  *
  * Подключаем сам файл application.css
  *= require_self
  */
+
+ // Connect bootstrap styles
+ @import "bootstrap";

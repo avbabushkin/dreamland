@@ -4,6 +4,7 @@ ru:
       user: 'Пользователь'
     attributes:
       user:
+        email: 'Email'
         name: 'Имя'
         username: 'Имя пользователя'
         avatar: 'Фотография'
@@ -13,6 +14,8 @@ ru:
       models:
         user:
           attributes:
+            email:
+              blank: 'не может быть пустым'
             name:
               blank: 'не может быть пустым'
             username:
