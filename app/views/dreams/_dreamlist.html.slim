@@ -1,14 +1,26 @@
-- if @dreams.blank?
-  h2 Здесь пока пусто
-- else
-  - @dreams.each do |dream|
-    .item-user-dream
-      h2 = dream.dream_title
-      p = dream.dream_text
+li#dream-(#{dream.id})
+  = link_to dravatar_for(dream.user, size: 50), dream.user
+  span.user = link_to dream.user.email, dream.user
+  span.content = dream.content
+  span.timestamp
+    | Posted 
+    = time_ago_in_words(dream.created_at)
+    | ago
+
+= will_paginate @dreams
+
+/ - if @dreams.blank?
+/   h2 Здесь пока пусто
+/ - else
+/   - @dreams.each do |dream|
+/     .item-user-dream
+/       h2 = dream.content
+/       p = dream.
         
-      ul
-        li = link_to "удалить мечту", dream_path(dream), method: :delete
-        li = dream.created_at.strftime("%d.%m.%Y")
-      // лайки
-      //.wrapper-likes
-      //  = button_to 'Like', dream_likes_path(@dream), method: :post
+/       ul
+/         li = link_to "удалить мечту", dream_path(dream), method: :delete
+/         li = dream.created_at.strftime("%d.%m.%Y")
+
+/       // лайки
+/       //.wrapper-likes
+/       //  = button_to 'Like', dream_likes_path(@dream), method: :post
