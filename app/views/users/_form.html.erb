@@ -1,11 +1,12 @@
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+      <div class="alert alert-danger">
+        The form contains <%= pluralize(user.errors.count, "error") %>:
+      </div>
       <ul>
       <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li>- <%= message %></li>
       <% end %>
       </ul>
     </div>
@@ -19,10 +20,8 @@
     <%= form.password_field :password, placeholder: 'Password' %>
   </div>
 
-  <div class="field pb-5">
-    <p>
-      <%= form.password_field :password_confirmation, placeholder: 'Confirmation' %>
-    </p>
+  <div class="field pb-3">
+    <%= form.password_field :password_confirmation, placeholder: 'Confirmation' %>
   </div>
 
   <div class="actions">

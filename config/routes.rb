@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
+
+  get 'about'   => 'static_pages#about'
+  get 'contact' => 'static_pages#contact'
+  get 'signup'  => 'users#new'
+  get 'login'   => 'sessions#new'
+  get 'login'   => 'sessions#create'
+  get 'logout'  => 'sessions#destroy'
+
   resources :users #, except: [:index]
   resources :dreams 
   resources :sessions, only: [:new, :create, :destroy]
-
-  get 'signup', to: 'users#new', as: 'signup'
-  get 'login', to: 'sessions#new', as: 'login'
-  get 'logout', to: 'sessions#destroy', as: 'logout'
-
-  get 'about', to: 'static_pages#about', as: 'about'
-  get 'contact', to: 'static_pages#contact', as: 'contact'
 end

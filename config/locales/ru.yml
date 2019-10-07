@@ -16,6 +16,7 @@ ru:
           attributes:
             email:
               blank: 'не может быть пустым'
+              taken: 'уже существует'
             name:
               blank: 'не может быть пустым'
             username:
@@ -25,4 +26,5 @@ ru:
               blank: 'не может быть пустым'
             password_confirmation:
               blank: 'не может быть пустым'
+              confirmation: 'не совпадает'
 

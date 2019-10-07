@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @dreams = @user.dreams.paginate(page: params[:page])
   end
 
-  # GET /users/new
+  # GET /users/signup
   def new
     @user = User.new
   end
