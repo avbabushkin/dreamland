@@ -1,23 +1,27 @@
 class SessionsController < ApplicationController
-  
   def new
-  
   end
 
   def create
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to user, notice: "Залогинились!"
+    user = User.find_by(email: params[:session][:email].downcase)
+    
+    if user && user.authenticate(params[:session][:password]) 
+      log_in user
+      redirect_to user
+      # login success
+      flash.notice = 'Success login'
     else
-      redirect_to root_url, notice: "Email or password invalid"
-      # flash.now[:alert] = "Email or password invalid"
-      # render "new"
+      # flash.now.alert = "Invalid email/password combination"
+        flash.now.notice = 'Invalid email/password combination'
+      render :new
     end
   end
 
   def destroy
-    session[:user_id] = nil
-    redirect_to root_url, notice: "Разлогинились" 
+    log_out
+    redirect_to root_url, notice: 'Logout success'
   end
+
+  private 
+
 end

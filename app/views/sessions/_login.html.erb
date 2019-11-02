@@ -1,5 +1,7 @@
 <div class="d-flex bd-highlight">
-  <%= form_with url: sessions_path do |form| %>
+  <%= form_with scope: :session, url: login_path do |form| %>
+    
+    <!-- todo login errors -->
     
     <div class="field pb-2">
       <%= form.text_field :email, placeholder: 'Email' %>
