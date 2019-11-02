@@ -8,11 +8,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password]) 
       log_in user
       redirect_to user
-      # login success
       flash.notice = 'Success login'
     else
-      # flash.now.alert = "Invalid email/password combination"
-        flash.now.notice = 'Invalid email/password combination'
+      flash.now.notice = 'Invalid email/password combination'
       render :new
     end
   end
