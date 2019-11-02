@@ -1,0 +1,19 @@
+
+<div class="d-flex bd-highlight">
+  <p id="notice"><%= notice %></p>
+  <%= form_with scope: :session, url: login_path do |form| %>
+    
+
+    <div class="field pb-2">
+      <%= form.text_field :email, placeholder: 'Email' %>
+    </div>
+    
+    <div class="field pb-2">
+      <%= form.password_field :password, placeholder: 'Password' %>
+    </div>
+    
+    <div class="actions">
+      <%= form.submit "Log in", class: 'btn'%>
+    </div>
+  <% end %>  
+</div>
