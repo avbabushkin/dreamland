@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.6.3'
 
 gem 'rails',                    '~> 5.2.2'
 gem 'puma',                     '~> 3.11'
-gem 'uglifier',                 '>= 1.3.0'
 
 # template gems
 gem 'sass-rails',               '~> 5.0'
@@ -13,6 +12,9 @@ gem 'slim'
 gem 'bootstrap',                '~> 4.3.1'
 gem 'will_paginate',            '~> 3.0.7'
 gem 'bootstrap-will_paginate',  '~> 0.0.10'
+
+# compress
+gem 'uglifier',                 '>= 1.3.0'
 
 gem 'coffee-rails',             '~> 4.2'
 gem 'turbolinks',               '~> 5'
@@ -26,7 +28,7 @@ gem 'pg'
 gem 'bcrypt',                   '~> 3.1.7'
 
 group :test, :development do
-  gem 'rspec-rails',            '~> 3.5', '>= 3.5.2'
+  gem 'rspec-rails',            '~> 3.5',   '>= 3.5.2'
 end
 
 group :development do
