@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
     if @user.save 
       log_in @user 
-      redirect_to @user, notice: "Hello, #{@user.name}"
+      redirect_to @user, notice: "Hello, #{@user.email}"
     else
       render 'new'
     end
