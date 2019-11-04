@@ -1,6 +1,36 @@
 <h1>Editing User</h1>
 
-<%= render 'form', user: @user %>
+<%= form_with(model: @user, local: true) do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        The form contains <%= pluralize(user.errors.count, "error") %>:
+      </div>
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li>- <%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field pb-2">
+    <%= form.text_field :email, placeholder: 'Email' %>
+  </div>
+
+  <div class="field pb-2">
+    <%= form.password_field :password, placeholder: 'Password' %>
+  </div>
+
+  <div class="field pb-3">
+    <%= form.password_field :password_confirmation, placeholder: 'Confirmation' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Update', class: 'btn' %>
+  </div>
+<% end %>
+
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>

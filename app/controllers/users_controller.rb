@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  #before_action :load_user, except: [:index, :new, :create]
+  before_action :load_user, except: [:new, :create]
 
   def new
     @user = User.new
@@ -18,28 +18,24 @@ class UsersController < ApplicationController
   end
 
   def show
-    load_user
   end
 
   def edit
+
   end
 
   def update
     if @user.update(user_params)
-      redirect_to @user, success: "Up to date saccess"
+      redirect_to @user, success: "Update saccess"
     else
       render 'edit'
     end
   end
 
-  def destroy
-    user = load_user    
-  end
-
   private 
 
   def load_user
-    @user = User.find(params[:id])
+    @user ||= User.find(params[:id])
   end
 
   def user_params
