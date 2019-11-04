@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
     if @user.save 
       log_in @user 
-      redirect_to @user, notice: "Hello, #{@user.email}"
+      redirect_to @user, success: "Hello, #{@user.email}! Welcome to Dreamland!"
     else
       render 'new'
     end
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: "Up to date saccess"
+      redirect_to @user, success: "Up to date saccess"
     else
       render 'edit'
     end
