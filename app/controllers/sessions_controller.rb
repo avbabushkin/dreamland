@@ -10,8 +10,7 @@ class SessionsController < ApplicationController
       redirect_to user
       flash.notice = 'Success login'
     else
-      flash.now.notice = 'Invalid email/password combination'
-      render :new
+      redirect_to login_url, danger: "Invalid email or password"
     end
   end
 
