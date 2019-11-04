@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   post    'login'     => 'sessions#create'
   delete  'logout'    => 'sessions#destroy'
 
-  resources :users #, except: [:index]
+  resources :users, except: [:index, :destroy]
   resources :dreams 
 end
