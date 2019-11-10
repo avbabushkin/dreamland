@@ -1,0 +1,20 @@
+.wrap-profile
+  h1.pb-4 Profile page
+  
+  .d-flex
+    .user-priofile-block
+      .user-photo
+        = image_tag src="no_photo.png"
+
+      .user-name.text-center
+        = cut_email @user
+  
+    .d-flex.flex-wrap.pl-5
+      - if @user == current_user
+        a href="#{new_dream_path}"
+          .d-flex.new-dream.dream-card.align-items-center.justify-content-center
+            h3 New dream
+      
+      - @dreams.each do |dream|
+        .dream-card.p-2
+          = render 'dreams/dream', dream: dream

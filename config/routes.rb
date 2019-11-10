@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   # user routes
   get     'signup'    => 'users#new'
   get     'users'     => 'users#new'
+  
   resources :users, except: [:index, :destroy]
-
-  resources :dreams 
+  resources :dreams, except: [:index]
+  
 end

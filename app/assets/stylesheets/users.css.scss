@@ -1,7 +1,4 @@
-// new user page styles begin
-// '/signup'
-
-
+// new user page styles 
 .signup {
   margin-bottom: 20px;
   padding: 20px;
@@ -38,73 +35,11 @@
     }
 
   }
-  
-
-    input[type=submit] {
-      padding: 7px 16px 8px;
-      border: 0px;
-      background: transparent;
-      width: 100%;
-    }
-    
-    .btn {
-      // width: 100px !important;
-      // height: 35px !important;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-  
 }
 
-// new user page styles end
-
-
-
-// page show user
-
-.container-user {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 50px;
-  width: 700px;
-  border: 0px solid #999;
-
-  h2 {
-    font-size: 20px;
-    color: #515C68;
-  }
-
-  // show user page styles
-
-  .block-image-name {
-    display: flex;
-
-    .image-user {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      overflow: hidden;
-      
-      img {
-        margin-top: -30%;
-        margin-left: -50%;
-        width: 200px;
-      }
-    }
-   
-    .wrapper-name {
-      margin: 20px 0px 0px 20px;
-      border: 0px solid #999;
-      
-      h1 {
-        margin-bottom: 10px;
-        font-size: 30px;
-      }
-    }
-  }
+// show user page styles
+.wrap-profile {
+  
 }
 
 // new user page styles
@@ -145,17 +80,6 @@
     }
   }
 }
-
-// input[type=submit] {
-//       padding: 10px 15px; 
-//       background: #515C68; 
-//       border: 0 none;
-//       font-size: 20px;
-//       color: #fff;
-//       cursor:pointer;
-//       -webkit-border-radius: 5px;
-//       border-radius: 5px; 
-// }
 
 .form-errors {
   color: #dc554f;

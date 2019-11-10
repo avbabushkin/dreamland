@@ -13,11 +13,12 @@ class UsersController < ApplicationController
       log_in @user 
       redirect_to @user, success: "Hello, #{@user.email}! Welcome to Dreamland!"
     else
-      render 'new'
+      render :new
     end
   end
 
   def show
+    @dreams = @user.dreams
   end
 
   def edit
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user, success: "Update saccess"
     else
-      render 'edit'
+      render :edit
     end
   end
 

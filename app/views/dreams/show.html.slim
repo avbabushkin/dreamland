@@ -1,0 +1,6 @@
+.dream-wrap
+  h1 Dream ##{@dream.id}
+  p = @dream.content 
+  p = @dream.link
+
+  a.badge.badge-primary href="#{edit_dream_path}" edit dream

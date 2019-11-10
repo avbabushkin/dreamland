@@ -1,31 +1,58 @@
 class DreamsController < ApplicationController
-  
+  before_action :load_dream, except: [:new, :create]
+  before_action :authorize_user, except: [:new, :create, :show]
+
+  def new
+    @dream = Dream.new
+    @user = current_user if current_user
+    @dream.user = @user
+  end
+
   def create
-    current_user = User.find_by(id: session[:current_user_id])
     @dream = Dream.new(dream_params)
-    @dream.user = current_user
+    @dream.user = current_user if current_user
     
     if @dream.save
-      redirect_to user_path @dream.user
-      flash[:notice] = "Запись успешно создана"
+      redirect_to @dream.user, success: "Success"
     else
-      flash[:notice] = "Запись не создана"
-      redirect_to user_path @dream.user
+      redirect_to @dream.user, waring: "Fail"
+    end
+  end
+
+  def show
+        
+  end
+
+  def edit
+  end
+
+  def update
+    if @dream.update(dream_params)
+      redirect_to dream_path(@dream), info: 'Update success'
+    else
+      render :edit    
     end
   end
   
   def destroy
-    @dream = Dream.find(params[:id])
     user = @dream.user
     @dream.destroy
-
-    flash[:notice] = "Запись удалена"
-    redirect_to user_path(user), notice: 'Запись удалена'
+    redirect_to user_path(user), notice: 'Dreams has been delete'
   end
 
   private   
 
-  def dream_params
-    params.require(:dream).permit(:dream_title, :dream_text, :user_id)      
+  def load_dream
+    # user = current_user if current_user
+    @dream = Dream.find(params[:id])
   end
+
+  def authorize_user
+    reject_user unless @dream.user == current_user
+  end
+
+  def dream_params
+    params.require(:dream).permit(:content, :link, :user_id)      
+  end
+
 end

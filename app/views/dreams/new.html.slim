@@ -1,0 +1,13 @@
+.d-flex.justify-content-center
+  .dream-wrap
+    h3.text-center Write your dream
+    br
+    .dream-form
+      = form_with model: @dream, url: dreams_path do |f|            
+        .dream-field
+          = f.text_area :content
+        .dream-field
+          = f.text_field :link
+          
+        .dream-action 
+          = f.submit 'Add dream', class: 'btn btn-primary w-100'

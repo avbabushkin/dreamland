@@ -1,102 +1,47 @@
-.container-dreams {
-  font-family: RobotoLight;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  
+.dream-card {
+  margin: 10px;
+  padding: 5px;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  border: 1px solid #d3d9de;
+  border-radius: 4px;
+}
 
-  .notice {
-    margin: 15px 20px 5px 20px;
-    padding: 7px;
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid #999;
-    background-color: #1B98E0;
-    opacity: 0.6;
+.dream-form {
+
+  #dream_content {
+    padding: 6px 12px 8px; 
+    width: 300px;
+    border: 1px solid #d3d9de;
+    border-radius: 3px; 
   }
 
-  .block-exist-dreams {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 40px;
-    border: 0px solid #999;
-
-    .wrapper-user-dreams {
-      margin: 0px 0px 10px 30px;
-      width: 400px;
-
-      .item-user-dream {
-        padding-bottom: 0px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #DCDCDC;
-        
-        .date-style {
-          font-size: 12px;
-          font-weight: 700;
-          color: #4F5964;
-
-        }
-
-        ul {
-          display: flex;
-          list-style: none;
-          margin-top: 10px;
-          margin-bottom: 20px;
-          align-items: flex-end;
-        }
-        
-        li {
-          margin-right: 10px; 
-          font-size: 10px; 
-        }
-
-        p {
-          margin-top: 5px;
-        }
-        
-        a {
-          font-size: 12px;
-          text-decoration: none;
-        }
-      }
-    }
+  #dream_link {
+    padding: 6px 12px 8px; 
+    width: 300px;
+    border: 1px solid #d3d9de;
+    border-radius: 3px;
   }
+}
 
-  .block-new-dreams {
-    display: flex;
-    margin-top: 20px;
-    justify-content: flex-end;
-    border: 0px solid #999;
+.dream-field {
+  margin: 0 0 15px 0;
+  box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e
+}
 
-    .wrapper-newdream-form {
-      width: 400px;
-      margin: 0px 0px 0px 30px;
+#content {
+  padding: 6px 12px 8px; 
+  width: 270px;
+  height: 120px;
+  border: 1px solid #d3d9de;
+  border-radius: 3px; 
 
-      .item-newdream-form {
-        margin-bottom: 10px;
-        border: none;
-        border-radius: 10px;
-      
-        h3 {
-          font-size: 12px;
-        } 
+}
 
-        .form-style-title {
-          height: 20px;
-          width: 300px;
-          font-size: 15px;
-          border: none;
-          border-bottom: 1px solid #999;
-        } 
-
-        .form-style-text {
-          height: 100px;
-          width: 300px;
-          border: none;
-          border-bottom: 1px solid #999;
-        }
-      }
-    }
-  }
+#link {
+  padding: 6px 12px 8px; 
+  width: 270px;
+  border: 1px solid #d3d9de;
+  border-radius: 3px; 
 }

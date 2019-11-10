@@ -1,0 +1,13 @@
+
+.d-flex.justify-content-center
+  .dream-wrap
+    h3.text-center Edit dream
+    br
+    .dream-form
+      = form_with model: @dream, local: :true do |f|
+        .dream-field
+          = f.text_area :content
+        .dream-field
+          = f.text_field :link
+        .dream-action    
+          = f.submit 'Update', class: 'btn btn-primary'
