@@ -5,9 +5,9 @@
     .dream-form
       = form_with model: @dream, local: true do |f|            
         .dream-field
-          = f.text_area :content, placeholder: 'Write something...'
+          = f.text_area :content
         .dream-field
-          = f.text_field :link, placeholder: 'Add link to dream (optional)'
+          = f.text_field :link
           
-        .dream-action.d-flex.justify-content-end
-          = f.submit 'Add dream', class: 'btn btn-primary'
+        .dream-action 
+          = f.submit 'Add dream', class: 'btn btn-primary w-100'

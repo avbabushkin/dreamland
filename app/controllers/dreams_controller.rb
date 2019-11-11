@@ -28,7 +28,7 @@ class DreamsController < ApplicationController
 
   def update
     if @dream.update(dream_params)
-      redirect_to dream_path(@dream), success: 'Update success'
+      redirect_to dream_path(@dream), info: 'Update success'
     else
       render :edit    
     end
@@ -37,7 +37,7 @@ class DreamsController < ApplicationController
   def destroy
     user = @dream.user
     @dream.destroy
-    redirect_to user_path(user), info: 'Dreams has been delete'
+    redirect_to user_path(user), notice: 'Dreams has been delete'
   end
 
   private   
