@@ -2,5 +2,9 @@
   h1 Dream ##{@dream.id}
   p = @dream.content 
   p = @dream.link
-
-  a.badge.badge-primary href="#{edit_dream_path}" edit dream
+  
+  -if @dream.user == current_user
+    / a.badge.badge-primary href="#{edit_dream_path}" edit dream
+    => link_to "Edit dream", edit_dream_path, class: 'badge badge-primary'
+    =< link_to "Delete dream", dream_path(@dream), class: 'badge badge-danger',
+                      method: :delete
