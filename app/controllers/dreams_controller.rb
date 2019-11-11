@@ -37,7 +37,7 @@ class DreamsController < ApplicationController
   def destroy
     user = @dream.user
     @dream.destroy
-    redirect_to user_path(user), notice: 'Dreams has been delete'
+    redirect_to user_path(user), success: 'Dreams has been delete'
   end
 
   private   
