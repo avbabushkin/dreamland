@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     if @user == current_user
       render :edit
     else
-      redirect_to denial_path
+      redirect_to denial_path, danger: "Access denied"
     end 
   end
 
