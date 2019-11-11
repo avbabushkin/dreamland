@@ -10,6 +10,9 @@ class StaticPagesController < ApplicationController
   end
 
   def signin
+  end
+
+  def denial
     
   end
 end

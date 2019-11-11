@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def reject_user
-    redirect_to root_url, danger: 'Access denied'    
+    redirect_to denial_path, danger: 'Access denied'    
   end
 end
