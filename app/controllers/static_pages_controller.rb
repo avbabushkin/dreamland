@@ -1,6 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
-    @user = User.all
+    if current_user.present?
+      redirect_to user_url(current_user)
+    else
+      render :home
+    end
   end
 
   def about
