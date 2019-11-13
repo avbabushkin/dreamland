@@ -3,9 +3,13 @@ class DreamsController < ApplicationController
   before_action :authorize_user, except: [:new, :create, :show]
 
   def new
-    @dream = Dream.new
-    @user = current_user if current_user
-    @dream.user = @user
+    if !current_user.nil? 
+      @dream = Dream.new
+      @user = current_user if current_user
+      @dream.user = @user
+    else
+      redirect_to root_url, warning: "Please Login"
+    end
   end
 
   def create
@@ -15,7 +19,7 @@ class DreamsController < ApplicationController
     if @dream.save
       redirect_to @dream.user, success: "Success"
     else
-      redirect_to @dream.user, waring: "Fail"
+      redirect_to @dream.user, warning: "Fail"
     end
   end
 

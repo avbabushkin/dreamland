@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   #static pages routes
   get     'about'     => 'static_pages#about'
   get     'contact'   => 'static_pages#contact'
-  get     'denial'   => 'static_pages#denial'
+  get     'denial'    => 'static_pages#denial'
 
   # session routes
   get     'login'     => 'sessions#new'

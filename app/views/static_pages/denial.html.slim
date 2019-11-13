@@ -1,4 +1,6 @@
 h1 Page forbidden
 
-| Come back to
-b =< link_to "Profile", user_path(current_user) 
+- if !current_user.nil?
+  b =< link_to " Go to Profile", user_path(current_user), class: 'back-link'
+- else
+  b =< link_to "Go Back", root_path, class: 'back-link' 
