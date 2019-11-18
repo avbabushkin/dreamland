@@ -10,6 +10,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save 
+      # для отправки писма вызваем метод welcome_email класса UserMailer
+      # метод deliver_latter добавляет письмо в очередь
+      UserMailer.with(user: @user).welcome_email.deliver_latter
       log_in @user 
       redirect_to @user, success: "Hello, #{@user.email}! Welcome to Dreamland!"
     else
@@ -46,5 +49,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :name, :password, :password_confirmation)
   end
-
 end
