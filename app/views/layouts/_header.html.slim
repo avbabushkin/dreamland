@@ -9,6 +9,9 @@
           = link_to 'Log out', logout_url, method: :delete 
     - else
       a.logo href="/" Dreamland   
-      ul
+      ul.d-inline-flex
         li 
-          = link_to "Sign up", signup_path
+          = link_to "log in", login_path
+        li 
+          = link_to "sign up", signup_path
+          
