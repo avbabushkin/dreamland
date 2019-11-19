@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Static pages only
 class StaticPagesController < ApplicationController
   def home
     if current_user.present?
@@ -7,16 +10,11 @@ class StaticPagesController < ApplicationController
     end
   end
 
-  def about
-  end
+  def about; end
 
-  def contact
-  end
+  def contact; end
 
-  def signin
-  end
+  def signin; end
 
-  def denial
-    
-  end
+  def denial; end
 end

@@ -1,5 +1,5 @@
 module SessionsHelper
-  # осуществлет вход данного пользователя
+  # login user method
   def log_in(user)
     session[:user_id] = user.id    
   end
@@ -9,12 +9,11 @@ module SessionsHelper
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
-  # возвращает true, если пользователь зарегистрирован, иначе false
+  # возвращает true, если пользователь вошел, иначе false
   # current_user.nil? - вернет true если объект @current_user пуст
   # !current_user.nil? - знак ! (логическое отрицание -НЕ) инвертирует
   # поведение метода nil? т.е. если объект @current_user пуст, то 
   # !current_user.nil? вернет false  
-
   def logged_in?
     !current_user.nil?
   end
