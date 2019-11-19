@@ -10,8 +10,6 @@ gem 'puma',                     '~> 3.11'
 gem 'sass-rails',               '~> 5.0'
 gem 'slim' 
 gem 'bootstrap',                '~> 4.3.1'
-gem 'will_paginate',            '~> 3.0.7'
-gem 'bootstrap-will_paginate',  '~> 0.0.10'
 
 # compress
 gem 'uglifier',                 '>= 1.3.0'
