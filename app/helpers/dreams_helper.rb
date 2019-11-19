@@ -1,5 +1,5 @@
-module DreamsHelper
-  def dreams_list
+# frozen_string_literal: true
 
-  end
+module DreamsHelper
+  def dreams_list; end
 end
