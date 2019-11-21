@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   # tempalate of email contain in views/user_mailer/
   def welcome_email
     @user = params[:user]
-    @url = 'http://example.com/login'
+    @url = 'https://dreamland.herokuapp.com/login'
     mail(to: @user.email, subject: 'Walcome to Dreamland')
   end
 end

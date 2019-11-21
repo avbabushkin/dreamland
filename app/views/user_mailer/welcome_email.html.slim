@@ -7,12 +7,13 @@ body
   h1 Welcome to dreamland.com, = @user.email
   p 
     |You have succesfully signed up to dreamland.com
-      your name is: "#{@user.login}
+      your name is: 
+    = @user.email
 
   br
   p 
     | To login to site just follow this link: 
-    = link_to "Link", login_url
+    a href="#{@url}" Login
 
   p Thanks for joining and have a great day!
   
