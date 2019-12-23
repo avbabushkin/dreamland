@@ -5,6 +5,8 @@
     .dream-form
       = form_with model: @dream, local: true do |f|            
         .dream-field
+          = f.text_field :content, placeholder: 'Write title'
+        .dream-field
           = f.text_area :content, placeholder: 'Write something...'
         .dream-field
           = f.text_field :link, placeholder: 'Add link to dream (optional)'
