@@ -3,12 +3,12 @@
 a href="#{dream_path(dream)}"  
   .dream id="dream_#{dream.id}" 
     .dream-content
-      .dream-title
-        = dream.title
-      br
-      
-      .dream-text
-        = dream.content
-     
+      .text  
+        .dream-title.dream-link
+          = dream.title if !dream.title.nil?
+
+        .dream-text
+          = dream.content
+       
       .dream-link
         = dream.link  
