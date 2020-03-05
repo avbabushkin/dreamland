@@ -1,7 +1,7 @@
-Dreamland is lil project for fun. 
+### Dreamland is lil project for fun. 
 
-Everybody who want to contribute can do it. Fork it and send pull request. 
-Dreamland is look like social network for users who wants shared their note dreams and wishes...
+  Everybody who want to contribute can do it. Fork it and send pull request. 
+  Dreamland is look like social network for users who wants shared their note dreams and wishes...
 
 ### Workflow:
   
@@ -11,11 +11,11 @@ Dreamland is look like social network for users who wants shared their note drea
   Trello: https://trello.com/b/Opev7JXJ/kanban-dreamland
   Git-flow: https://guides.github.com/introduction/flow/ 
 
-## Requirements:
+### Requirements:
     
     install ruby `2.6.3`
 
-## Instalation:
+### Instalation:
 
   clone:
 
