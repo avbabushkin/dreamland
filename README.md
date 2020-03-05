@@ -7,7 +7,8 @@ Workflow:
 Trello
 Git-flow
 
-Trello: https://trello.com/b/VxNSvLPC/dreamland
+Trello: https://trello.com/b/Opev7JXJ/kanban-dreamland
+Git-flow: https://guides.github.com/introduction/flow/ 
 
 ##Requirements:
     
