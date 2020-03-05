@@ -3,14 +3,12 @@ Dreamland is lil project for fun.
 Everybody who want to contribute can do it. Fork it and send pull request. 
 Dreamland is look like social network for users who wants shared their note dreams and wishes...
 
-Workflow:
+### Workflow:
   
   Trello
-
   Git-flow
 
   Trello: https://trello.com/b/Opev7JXJ/kanban-dreamland
-
   Git-flow: https://guides.github.com/introduction/flow/ 
 
 ## Requirements:
