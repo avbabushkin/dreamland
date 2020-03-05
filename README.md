@@ -1,6 +1,28 @@
-# WARNING! Very low quality code. 
-Dreamland is my lil project for fun. 
+Dreamland is lil project for fun. 
 
-Dreamland will be look like social network for users who wants shared their note dreams and wishes...
+Everybody who want to contribute can do it. Fork it and send pull request. 
+Dreamland is look like social network for users who wants shared their note dreams and wishes...
 
-I working on Dreamland everyday. And also improving and refactor my code.
+Workflow:
+Trello
+Git-flow
+
+Trello: https://trello.com/b/VxNSvLPC/dreamland
+
+##Requirements:
+    
+    install ruby `2.6.3`
+
+##Instalation:
+
+  clone:
+
+    git clone git@github.com:avbabushkin/dreamland.git
+   
+    cd dreamland
+
+  run:
+    
+    rake db:create
+    rake db:migrate
+    rake db:seed
