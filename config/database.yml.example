@@ -7,12 +7,12 @@ default: &default
 
 development:
   <<: *default
-  database: dreamgram_development
+  database: dl_dev
 
 test:
   <<: *default
-  database: dreamgram_test
+  database: dl_test
 
 production:
   <<: *default
-  database: dreamgram_production
+  database: dl_prod
