@@ -3,9 +3,10 @@
     h3.text-center Write your dream
     br
     .dream-form
-      = form_with model: @dream, local: true do |f|            
+      = form_with model: @dream, local: true do |f|
+        / TODO: refactor selector names
         .dream-field
-          = f.text_field :content, placeholder: 'Write title'
+          = f.text_field :title, placeholder: 'Write title'
         .dream-field
           = f.text_area :content, placeholder: 'Write something...'
         .dream-field

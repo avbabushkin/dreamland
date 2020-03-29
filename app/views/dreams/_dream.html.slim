@@ -1,14 +1,13 @@
-- dream ||= nil
-  
-a href="#{dream_path(dream)}"  
-  .dream id="dream_#{dream.id}" 
-    .dream-content
-      .text  
-        .dream-title.dream-link
-          = dream.title if !dream.title.nil?
-
-        .dream-text
-          = dream.content
-       
-      .dream-link
-        = dream.link  
+      - if @load_user.dreams.empty?
+        h2.pl-5 No one dream yet  
+      .d-flex.flex-wrap.pl-5
+        - if @load_user == current_user
+          a href="#{new_dream_path}"
+            .d-flex.new-dream.dream-card.align-items-center.justify-content-center
+              h3 New dream
+        
+        - @dreams.each do |dream|
+            a href="#{dream_path(dream)}"  
+              .d-flex.dream-card.p-2.align-items-center.justify-content-center
+                .dream id="dream_#{dream.id}" 
+                  h3 = title_cut(dream.title)
