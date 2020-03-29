@@ -15,7 +15,9 @@ class UsersController < ApplicationController
       # for send email to user use method welcome_email
       # welcome_email is method of class UserMailer
       # method deliver_latter adding email to queue
-      UserMailer.with(user: @user).welcome_email.deliver_now
+      
+      #TODO: fix mail sending from heroku
+      # UserMailer.with(user: @user).welcome_email.deliver_now
       log_in @user
       redirect_to @user, success: "Hello, #{@user.email}! Welcome to Dreamland!"
     else
