@@ -6,6 +6,8 @@
     .dream-form
       = form_with model: @dream, local: true do |f|
         .dream-field
+          = f.text_field :title
+        .dream-field
           = f.text_area :content
         .dream-field
           = f.text_field :link

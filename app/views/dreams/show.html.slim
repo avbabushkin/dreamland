@@ -1,5 +1,6 @@
 .dream-wrap
   h1 Dream ##{@dream.id}
+  p = @dream.title
   p = @dream.content 
   p = link_to "Link to dream", @dream.link, class: 'btn'
 
