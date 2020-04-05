@@ -55,6 +55,6 @@ class DreamsController < ApplicationController
   end
 
   def dream_params
-    params.require(:dream).permit(:content, :link, :user_id)
+    params.require(:dream).permit(:title, :content, :link, :user_id)
   end
 end
