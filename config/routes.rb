@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   resources :users, except: [:index, :destroy]
   resources :dreams, except: [:index]
   
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end
