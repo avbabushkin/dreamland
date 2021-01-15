@@ -1,6 +1,6 @@
 ### Dreamland is lil project for fun. 
 
-  Everybody who want to contribute can do it. Fork it and send pull request. 
+  Fork it and send pull request. 
   Dreamland is look like social network for users who wants shared their note dreams and wishes...
 
 ### Workflow:
@@ -25,3 +25,7 @@
     rake db:create
     rake db:migrate
     rake db:seed
+
+### Contribute
+
+Fork and make PR :)
