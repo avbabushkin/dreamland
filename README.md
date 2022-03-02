@@ -1,6 +1,6 @@
 ### Dreamland is lil project for fun. 
 
-   Dreamland is look like social network for users who wants shared their note dreams and wishes...
+   Dreamland is looks like social network for users who wants shared their note dreams and wishes...
 
 ### Workflow:
   
