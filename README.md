@@ -5,7 +5,7 @@
 ### Workflow:
   
   **Trello:** https://trello.com/b/Opev7JXJ/kanban-dreamland<br/>
-  **GitHub Flow:** https://guides.github.com/introduction/flow/`
+  **GitHub Flow:** https://guides.github.com/introduction/flow
 
 ### Requirements:
     
