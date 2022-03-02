@@ -1,7 +1,6 @@
 ### Dreamland is lil project for fun. 
 
-  Fork it and send pull request. 
-  Dreamland is look like social network for users who wants shared their note dreams and wishes...
+   Dreamland is look like social network for users who wants shared their note dreams and wishes...
 
 ### Workflow:
   
